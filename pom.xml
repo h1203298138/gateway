@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>disillude-parent</artifactId>
+    <groupId>com.hua.disillude</groupId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+
+  <groupId>com.hua.gateway</groupId>
+  <artifactId>gateway-parent</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0.0-SNAPSHOT</version>
+
+  <modules>
+    <module>gateway-service</module>
+  </modules>
+
+  <properties>
+    <disillude.version>1.0.0-SNAPSHOT</disillude.version>
+  </properties>
+
+  <scm>
+    <connection>scm:git:https://github.com/h1203298138/gateway-parent.git</connection>
+    <developerConnection>scm:git:https://github.com/h1203298138/gateway-parent.git</developerConnection>
+    <url>https://github.com/h1203298138/gateway-parent.git</url>
+    <tag>HEAD</tag>
+  </scm>
+
+  <dependencyManagement>
+    <!-- spring依赖 -->
+    <dependencies>
+      <dependency>
+        <groupId>com.hua.disillude</groupId>
+        <artifactId>disillude-dependencies</artifactId>
+        <version>${disillude.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+</project>
